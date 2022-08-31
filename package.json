@@ -10,9 +10,9 @@
         "build:tsd": "jxa /Applications/iTerm.app"
     },
     "keywords": [
+        "iterm",
         "alfred",
         "workflow",
-        "tunnelblick",
         "vpn",
         "alfy"
     ],
