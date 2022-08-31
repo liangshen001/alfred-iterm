@@ -1,0 +1,38 @@
+{
+    "name": "@liangshen/alfred-iterm",
+    "version": "1.0.2",
+    "description": "Alfred workflow for iTerm",
+    "type": "module",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "node --loader ts-node/esm action.ts",
+        "build:tsd": "jxa /Applications/iTerm.app"
+    },
+    "keywords": [
+        "alfred",
+        "workflow",
+        "tunnelblick",
+        "vpn",
+        "alfy"
+    ],
+    "repository": "liangshen001/alfred-iterm",
+    "author": {
+        "name": "Wang Liang",
+        "email": "850598163@qq.com"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@apple-jxa/cli": "0.0.8",
+        "@apple-jxa/types": "0.0.5",
+        "@liangshen/tsconfig": "^1.0.3",
+        "@types/node": "^18.0.0",
+        "ts-node": "^10.8.2",
+        "typescript": "^4.7.2"
+    },
+    "dependencies": {
+        "@apple-jxa/node": "0.0.10",
+        "@liangshen/alfred": "^1.1.20",
+        "bplist-parser": "^0.3.2"
+    }
+}
