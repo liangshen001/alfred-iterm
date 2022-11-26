@@ -1,6 +1,6 @@
 {
     "name": "@liangshen/alfred-iterm",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Alfred workflow for iTerm",
     "type": "module",
     "main": "dist/index.js",
