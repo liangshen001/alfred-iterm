@@ -1,14 +1,13 @@
 import alfred, {OutputItem} from "@liangshen/alfred";
-import plist from 'bplist-parser';
-import os from 'os'
+import iterm from "@liangshen/iterm"
 
 // await run(() => {
 //     let application = Application('ITerm');
 //     application.createWindowWithProfile('118.31.122.16-新平台-后端-001');
 // })
 
-var obj = await plist.parseFile(`${os.homedir()}/Library/Preferences/com.googlecode.iterm2.plist`);
-const items: OutputItem[] = obj[0]['New Bookmarks'].map((i: any) => ({
+const preferences = iterm.getPreferencesSync();
+const items: OutputItem[] = preferences['New Bookmarks'].map(i => ({
     title: i.Name,
     subtitle: i.Tags.join(','),
     arg: i.Name

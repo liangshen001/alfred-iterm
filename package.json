@@ -33,6 +33,6 @@
     "dependencies": {
         "@apple-jxa/node": "0.0.10",
         "@liangshen/alfred": "^1.1.20",
-        "bplist-parser": "^0.3.2"
+        "@liangshen/iterm": "^1.0.3"
     }
 }
