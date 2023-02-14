@@ -48,37 +48,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>1</integer>
-				<key>hotmod</key>
-				<integer>524288</integer>
-				<key>hotstring</key>
-				<string>S</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>35EC1C91-DB1E-4D21-9694-5D2DCECBAC8B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -148,31 +117,120 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>1</integer>
+				<key>hotmod</key>
+				<integer>524288</integer>
+				<key>hotstring</key>
+				<string>S</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>35EC1C91-DB1E-4D21-9694-5D2DCECBAC8B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>1</string>
+	<string># Alfred整合Item2
+
+
+
+**日常连接服务器常使用用Iterm2的Profile功能，那么做为键盘党如何快速准确的打开指定的服务器哪？**
+**为了解决这个问题简单的开发了一个alfred workflow **
+
+## 效果图
+
+
+
+使用快捷键 `option + S` 快速打开工作流（也可在alfred中输入iterm + 空格）
+
+![](https://test1.jsdelivr.net/gh/liangshen001/PicGo@latest/2022/images/alfrediterm.png)
+
+回车选中的项目，会使用Iterm打开对应的终端。
+
+可使用搜索功能进行检索，支持逻辑与(&amp;)和逻辑或(|)
+
+![](https://test1.jsdelivr.net/gh/liangshen001/PicGo@latest/2022/images/Screenshot%202022-11-27%20at%2009.16.30.png)
+
+## 运行环境
+
+- Node v8+
+- Alfred5(Powerpack)
+- Iterm2
+
+## 安装
+
+```shell
+npm i @liangshen001/alfred-iterm -g
+```
+
+安装好后 Workflows 会多出个叫 iTerm 的工作流
+
+- 可自定义快捷键 默认为 option + S
+- 可自定义关键词 默认为 iterm
+
+![](https://test1.jsdelivr.net/gh/liangshen001/PicGo@latest/2022/images/alfrediterm2.png)
+
+
+
+## 卸载
+
+```shell
+npm uninstall @liangshen001/alfred-iterm -g
+```
+
+
+
+## ITerm配置
+
+
+
+配置Profiles 工作流支持检索Name和tags 所以Name最好用 IP +一些标识，用Tags做一些分类标识, 这样方便快捷搜索。
+
+选择 Command 然后输入 ssh service@ip  ( IP 为你想连接服务器的 IP 地址)
+
+![](https://test1.jsdelivr.net/gh/liangshen001/PicGo@latest/2022/images/itermprofiles.png)</string>
 	<key>uidata</key>
 	<dict>
 		<key>0EFA5187-E5A9-4A4E-80A8-E23217EF7A4F</key>
 		<dict>
 			<key>xpos</key>
-			<real>460</real>
+			<real>560</real>
 			<key>ypos</key>
-			<real>85</real>
+			<real>245</real>
 		</dict>
 		<key>35EC1C91-DB1E-4D21-9694-5D2DCECBAC8B</key>
 		<dict>
 			<key>xpos</key>
-			<real>30</real>
+			<real>130</real>
 			<key>ypos</key>
-			<real>85</real>
+			<real>245</real>
 		</dict>
 		<key>D514570E-FB0B-429C-B516-3969AFE8B046</key>
 		<dict>
 			<key>xpos</key>
-			<real>240</real>
+			<real>340</real>
 			<key>ypos</key>
-			<real>85</real>
+			<real>245</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>

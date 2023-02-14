@@ -10,7 +10,10 @@ const preferences = iterm.getPreferencesSync();
 const items: OutputItem[] = preferences['New Bookmarks'].map(i => ({
     title: i.Name,
     subtitle: i.Tags.join(','),
-    arg: i.Name
+    arg: i.Name,
+    text: {
+        copy: i.Command.split('@')[1]
+    }
 }));
 alfred.output({
     items
